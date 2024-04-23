@@ -1,0 +1,107 @@
+
+.list-row{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin: 1.5rem;
+    border-radius: 1rem;
+}
+.list-row:hover{
+    background-color: var(--darkgrey);
+    transition: all 0.3s;
+}
+.list-row td{
+    text-align: start;
+    width: 18%;
+} 
+.td-image{
+    width: 3rem !important;
+    margin-right: 1.5rem;
+}
+.td-center-align{
+    text-align: center;
+}
+.td-right-align{
+    text-align: right;
+}
+.mobile-td-mkt{
+    display: none;
+}
+.mobile-td-current-price{
+    display: none;
+}
+@media only screen and (max-width: 1100px) {
+    .td-icon{
+        display: none;
+    }
+  }
+  @media only screen and (max-width: 1000px) {
+    .td-volume{
+        display: none ;
+    }
+  }
+
+  @media only screen and (max-width: 800px) {
+    .desktop-td-mkt{
+        display: none;
+    }
+    .mobile-td-mkt{
+        display: block;
+    }
+    .coin-price{
+        font-size: 0.8rem;
+    }
+    .price-chip{
+        border-radius: 1.5rem;
+        padding: 0.15rem;
+        font-weight: 400;
+        font-size: 0.7rem;
+        min-width: 45px;
+    }
+    .coin-logo{
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+    .coin-symbol{
+        font-weight:500 ;
+        font-size: 0.8rem;
+    }
+    .coin-name{
+        font-weight: 500;
+        font-size: 0.7rem;
+    }
+    .list-row td{
+        text-align: start;
+        width: 9%;
+    } 
+    .total-info-text{
+        font-size: 0.8rem;
+    font-weight: 400;
+    }
+    .list-row{
+    gap: 0;
+    padding: 0.4rem;
+    margin: 0.1rem;
+    border-radius: 1rem; 
+    width: 80vw;
+    }
+    .mobile-td-current-price{
+        display: block;
+    }
+    .desktop-td-current-price{
+        display: none;
+    }
+    .td-center-align{
+        text-align: left;
+    }
+    .td-right-align{
+        text-align: left;
+    }
+    .td-image{
+        width: 2rem !important;
+        margin-right: 1rem;
+    }
+
+  }

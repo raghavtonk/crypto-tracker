@@ -1,0 +1,15 @@
+.coin-info-heading{
+    padding: 1rem;
+    padding-bottom: 0rem;
+}
+.coin-info-desc{
+    padding: 1rem;
+    cursor: pointer;
+    font-family: 'Inter';
+}
+.coin-info-desc a{
+    text-decoration: underline !important;
+}
+.coin-info-desc a:hover{
+    color: var(--blue) !important;
+}

@@ -1,0 +1,126 @@
+.grid-container{
+    width: 300px;
+    background-color: var(--darkgrey);
+    border: 2px solid var(--darkgrey);
+    border-radius: 0.75rem;
+    padding: 0.2rem;
+} 
+.grid-container:hover{
+    border-color: var(--green) ;
+    transition: all 0.3s;
+}
+.gird-container-red:hover{
+    border-color: var(--red) !important;
+    transition: all 0.3s;
+}
+.info-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1.5rem;
+}
+.coin-logo{
+    height: 3.5rem;
+    width: 3.5rem;
+}
+
+.name-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.coin-symbol{
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight:600 ;
+    font-size: 1.2rem;
+    margin: 0;
+}
+.coin-name{
+    color: var(--grey);
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 1rem;
+    margin: 0;
+}
+.chip-flex{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 1.5rem;
+}
+.price-chip{
+    border-radius: 2rem;
+    padding: 0.35rem 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    min-width: 64px;
+}
+.icon-chip{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 2rem;
+    font-size: 1.1rem;
+    width: 2rem;
+}
+.green-chip{
+    border: 2px solid var(--green);
+    color: var(--green);
+}
+.red-chip{
+    border: 2px solid var(--red);
+    color: var(--red);
+}
+.green-chip:hover{
+    background-color: var(--green);
+    color: var(--white);
+    transition: all 0.3s;
+}
+.red-chip:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.info-container{
+    margin: 1.5rem;
+}
+.coin-price{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.total-info-text{
+    color: var(--grey);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+@media only screen and (max-width: 800px) {
+    .grid-container{
+        width: 250px;
+        background-color: var(--darkgrey);
+        border: 2px solid var(--darkgrey);
+        border-radius: 0.75rem;
+        padding: 0.2rem;
+    } 
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        line-height: 0.1rem;
+        margin-top: 0.1rem;
+    }
+    .grid-icon.icon-chip{
+        gap: 0.5rem;
+    height: 1.5rem;
+    font-size: 0.8rem;
+    width: 1.5rem;
+     }
+     .chip-flex{
+      
+        gap: 0.8rem;
+        margin: 0.5rem 1.5rem;
+    }
+}

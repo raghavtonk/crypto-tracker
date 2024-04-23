@@ -1,0 +1,44 @@
+.grids-container{
+    display: flex;
+    width: 90vw;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 1.5rem ;
+}
+.table-list{
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.tbody-list{
+    width: 100%;
+    display: block;
+}
+
+@media only screen and (max-width: 1200px) {
+    .table-list{
+        width: 95%;
+      }
+}
+
+@media only screen and (max-width: 800px) {
+    .grids-container{
+        margin: 0;
+    }
+    .table-list{
+        width: 100%;
+        
+      }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .grids-container{
+        width: 100%;
+    }
+    .table-list{
+        margin: 0;
+      }
+  }

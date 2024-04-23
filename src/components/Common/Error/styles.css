@@ -1,0 +1,14 @@
+.error {
+    max-width: 40rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: var(--blue);
+    color: #3e0505;
+  }
+  #confirmation-actions {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+  }
+  

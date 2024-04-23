@@ -1,10 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-:root{
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap'); */
+/* :root{
   --white: #f2efef;
-  --black: #111;
+  --black: #111 ;
   --blue: #3a80e9;
   --grey: #888;
   --darkgrey: #1b1b1b;
+  --green: #61c96f;
+  --red: #f94141; 
+  --yellow : #fff000;
+} */
+/* :root{
+  --white: #111;
+  --black: #f2efef ;
+  --blue: #3a80e9;
+  --grey: #1b1b1b;
+  --darkgrey: #DDDCDD;
   --green: #61c96f;
   --red: #f94141; 
   --yellow : #fff000;
@@ -19,9 +29,9 @@ body {
   background-color: var(--black);
   color: var(--white);
   font-family: "Inter", sans-serif;
-  /* height: 200vh; */
-}
-::selection{
+ 
+} */
+/* ::selection{
   background-color: var(--blue);
   color: var(--white);
 }
@@ -68,4 +78,4 @@ img{
   align-items: center;
   gap: 2rem;
   margin: 1.5rem;
-}
+} */

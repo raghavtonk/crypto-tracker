@@ -1,7 +1,7 @@
 import Header from "../components/Common/Header";
 import MainComponent from "../components/LandingPage/MainComponent";
 
-export default function HomePage() {
+export default function HomePage({darkMode,ontoggleDarkMode}) {
   return (
     <div>
       <Header />
@@ -9,3 +9,5 @@ export default function HomePage() {
     </div>
   );
 }
+
+// darkMode={darkMode} ontoggleDarkMode={ontoggleDarkMode}

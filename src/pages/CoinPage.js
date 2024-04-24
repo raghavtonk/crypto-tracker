@@ -96,7 +96,7 @@ useEffect(()=>{
             priceToggle={priceToggle}
             handlePriceTypeChange={handlePriceTypeChange}
           />
-          <LineChart chartData={chartData} priceToggle={priceToggle} />
+          <LineChart chartData={chartData} priceToggle={priceToggle} multiAxis={false}/>
         </div>
       )}
 

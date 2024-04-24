@@ -3,6 +3,7 @@ import "./styles.css";
 import { motion } from "framer-motion";
 import phone from "../../../assets/phone.png";
 import gradient from "../../../assets/gradient.png";
+import shareWebsite from "../../../functions/shareWebsite";
 export default function MainComponent() {
   return (
     <div className="flex-info">
@@ -39,7 +40,7 @@ export default function MainComponent() {
           transition={{ duration: 0.5, delay:1.5 }}
         >
           <Button>Dashboard</Button>
-          <Button outlined>Share</Button>
+          <Button outlined onClick={shareWebsite}>Share</Button>
         </motion.div>
       </div>
 

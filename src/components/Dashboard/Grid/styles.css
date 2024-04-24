@@ -18,13 +18,24 @@
     justify-content: flex-start;
     align-items: center;
     gap: 1rem;
-    margin: 1.5rem;
+    margin: 1.5rem ;
 }
 .coin-logo{
     height: 3.5rem;
     width: 3.5rem;
 }
-
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 2rem;
+    margin-left: 0rem;
+}
+.watchlist-btn{
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+}
 .name-col{
     display: flex;
     flex-direction: column;

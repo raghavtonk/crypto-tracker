@@ -81,3 +81,10 @@ img {
   gap: 2rem;
   margin: 1.5rem;
 }
+.noCoin-watchlist{
+    display: flex;
+    justify-content: center;
+}
+.noCoin-watchlist h1{
+    color: var(--blue);
+}

@@ -6,43 +6,26 @@ import HomePage from "./pages/HomePage";
 import DashboardPage from "./pages/DashboardPage";
 import CoinPage from "./pages/CoinPage";
 import ComparePage from "./pages/ComparePage";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+import WatchlistPage from "./pages/WatchlistPage";
 function App() {
-  // const [darkMode, setDarkMode] = useState(false);
-  // const handletoggleDarkMode = () => {
-  //   setDarkMode((prevMode) => !prevMode);
-  //   console.log("btoondarkcick");
-  // };
-  // useEffect(() => {
-  //   const root = document.documentElement;
-  //   if (darkMode) {
-  //     root.style.setProperty("--white", "#111");
-  //     root.style.setProperty("--black", "#f2efef");
-  //     root.style.setProperty("--grey", "#1b1b1b");
-  //     root.style.setProperty("--darkgrey", "#DDDCDD");
-  //   } else {
-  //     root.style.setProperty("--white", "#f2efef");
-  //     root.style.setProperty("--black", "#111");
-  //     root.style.setProperty("--grey", "#888");
-  //     root.style.setProperty("--darkgrey", "#1b1b1b");
-  //   }
-  // }, [darkMode]);
   return (
     <ModeContextProvider>
+      <ToastContainer />
       <div className="App">
         <BrowserRouter>
           <Routes>
             <Route
               path="/"
               element={
-                <HomePage
-                  // darkMode={darkMode}
-                  // ontoggleDarkMode={handletoggleDarkMode}
-                />
+                <HomePage/>
               }
             />
             <Route path="/dashboard" element={<DashboardPage />} />
             <Route path="/coin/:id" element={<CoinPage />} />
             <Route path="/compare" element={<ComparePage />} />
+            <Route path="/watchlist" element={<WatchlistPage />} />
             <Route />
           </Routes>
         </BrowserRouter>

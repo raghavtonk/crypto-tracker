@@ -13,15 +13,15 @@ export default function Header() {
       CryptoTracker <span style={{ color: "var(--blue)" }}>.</span>
       </h1>
       <div className="links">
-      {/* <button onClick={modeCtx.ontoggleDarkMode}>
-          {modeCtx.darkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-        </button> */}
         <SwitchMode />
         <Link to="/">
           <p className="link">Home</p>
         </Link>
         <Link to="/compare">
           <p className="link">Compare</p>
+        </Link>
+        <Link to="/watchlist">
+          <p className="link">Watchlist</p>
         </Link>
         <Link to="/dashboard">
         <Button onClick={()=>undefined}>Dashboard</Button>

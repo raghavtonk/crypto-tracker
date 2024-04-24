@@ -4,7 +4,13 @@ import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import { Tooltip } from "@mui/material";
 import { convertNumbers } from "../../../functions/convertNumbers";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { AddToWatchList } from "../../../functions/AddToWatchList";
+import isCoinInWatchlist from "../../../functions/isCoinInWatchlist";
+import Brightness5RoundedIcon from "@mui/icons-material/Brightness5Rounded";
+import Brightness7RoundedIcon from "@mui/icons-material/Brightness7Rounded";
 export default function List({ coin }) {
+  const [reRender, setReRender] = useState(false);
   let priceChipCssClass = "price-chip";
   let iconChipCssClass = "icon-chip td-icon";
 
@@ -22,6 +28,47 @@ export default function List({ coin }) {
     ) : (
       <TrendingDownIcon />
     );
+    const isInWatchlist = isCoinInWatchlist(coin.id);
+  let watchLogo = isInWatchlist ? (
+    <Brightness7RoundedIcon
+      fontSize="large"
+      style={{
+        color:
+          coin.price_change_percentage_24h < 0 ? "var(--red)" : "var(--green)",
+      }}
+    />
+  ) : (
+    <Brightness5RoundedIcon
+      fontSize="large"
+      style={{
+        color:
+          coin.price_change_percentage_24h < 0 ? "var(--red)" : "var(--green)",
+      }}
+    />
+  );
+  let watchLogo2 = isInWatchlist ? (
+    <Brightness7RoundedIcon
+      fontSize="small"
+      style={{
+        color:
+          coin.price_change_percentage_24h < 0 ? "var(--red)" : "var(--green)",
+      }}
+    />
+  ) : (
+    <Brightness5RoundedIcon
+      fontSize="small"
+      style={{
+        color:
+          coin.price_change_percentage_24h < 0 ? "var(--red)" : "var(--green)",
+      }}
+    />
+  );
+    const handleWatchlistButtonClick = (event, coinId) => {
+      event.preventDefault();
+      event.stopPropagation();
+      AddToWatchList(coinId);
+      setReRender((preValue) => !preValue);
+    };
   return (
     <Link to={`/coin/${coin.id}`}>
       <tr className="list-row">
@@ -90,6 +137,36 @@ export default function List({ coin }) {
                 {" "}
                 {convertNumbers(coin.market_cap)}
               </p>
+            )}
+          </td>
+        </Tooltip>
+        <Tooltip title="Add To Watch List" placement="bottom-start">
+          <td className="desktop-td-wlb">
+            {coin && (
+              <button
+              className="watchlist-btn td-right-align"
+              onClick={(event) => {
+                handleWatchlistButtonClick(event, coin.id);
+              }}
+            >
+              {" "}
+              {watchLogo}
+            </button>
+            )}
+          </td>
+        </Tooltip>
+        <Tooltip title="Add To Watch List" placement="bottom-start">
+          <td className="mobile-td-wlb">
+          {coin && (
+              <button
+              className="watchlist-btn td-right-align"
+              onClick={(event) => {
+                handleWatchlistButtonClick(event, coin.id);
+              }}
+            >
+              {" "}
+              {watchLogo2}
+            </button>
             )}
           </td>
         </Tooltip>

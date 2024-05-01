@@ -45,13 +45,13 @@ export default function TabsComponent({ coinsData }) {
               </div>
         </TabPanel>
         <TabPanel value="list">
-        <table className="table-list">
+        <div className="table-list">
           {(coinsData != [] && coinsData !== undefined) && coinsData.map((coin, index) => {
             return (
             <List key={coin.id}  coin={coin}/>
             );
           })}
-          </table>
+          </div>
         </TabPanel>
       </TabContext>
     </ThemeProvider>

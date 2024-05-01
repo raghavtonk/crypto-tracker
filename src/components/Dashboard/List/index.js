@@ -70,18 +70,18 @@ export default function List({ coin }) {
       setReRender((preValue) => !preValue);
     };
   return (
-    <Link to={`/coin/${coin.id}`}>
-      <tr className="list-row">
+        <Link to={`/coin/${coin.id}`}>
+      <div className="list-row">
         <Tooltip title="Coin Logo" placement="bottom-start">
-          <td className="td-image">
+          <div className="td-image">
             <img
               src={coin.image}
               alt={`${coin.name} Logo`}
               className="coin-logo"
             />
-          </td>
+          </div>
         </Tooltip>
-        <td>
+        <div>
           <div className="name-col" placement="bottom-start">
             <Tooltip title="Symbol">
               <p className="coin-symbol">{coin.symbol}</p>
@@ -90,17 +90,17 @@ export default function List({ coin }) {
               <p className="coin-name">{coin.name}</p>
             </Tooltip>
           </div>
-        </td>
+        </div>
         <Tooltip title="Price Change" placement="bottom-start">
-          <td className="chip-flex">
+          <div className="chip-flex">
             <div className={priceChipCssClass}>
               {coin.price_change_percentage_24h?.toFixed(2)}%
             </div>
             <div className={iconChipCssClass}>{trendingIcon}</div>
-          </td>
+          </div>
         </Tooltip>
         <Tooltip title="Current Price" placement="bottom-start">
-          <td>
+          <div>
             <h3
               className="coin-price td-center-align"
               style={{
@@ -112,36 +112,36 @@ export default function List({ coin }) {
             >
               ${coin.current_price?.toLocaleString()}
             </h3>
-          </td>
+          </div>
         </Tooltip>
 
         <Tooltip title="Total Volume" placement="bottom-start">
-          <td>
+          <div>
             <p className="total-info-text td-right-align td-volume">
               {coin.total_volume?.toFixed(2)}
             </p>
-          </td>
+          </div>
         </Tooltip>
         <Tooltip title="Market Cap" placement="bottom-start">
-          <td className="desktop-td-mkt">
+          <div className="desktop-td-mkt">
             <p className="total-info-text td-right-align">
               {" "}
               {coin.market_cap?.toLocaleString()}
             </p>
-          </td>
+          </div>
         </Tooltip>
         <Tooltip title="Market Cap" placement="bottom-start">
-          <td className="mobile-td-mkt">
+          <div className="mobile-td-mkt">
             {coin && coin.market_cap && (
               <p className="total-info-text td-right-align">
                 {" "}
                 {convertNumbers(coin.market_cap)}
               </p>
             )}
-          </td>
+          </div>
         </Tooltip>
         <Tooltip title="Add To Watch List" placement="bottom-start">
-          <td className="desktop-td-wlb">
+          <div className="desktop-td-wlb">
             {coin && (
               <button
               className="watchlist-btn td-right-align"
@@ -153,10 +153,10 @@ export default function List({ coin }) {
               {watchLogo}
             </button>
             )}
-          </td>
+          </div>
         </Tooltip>
         <Tooltip title="Add To Watch List" placement="bottom-start">
-          <td className="mobile-td-wlb">
+          <div className="mobile-td-wlb">
           {coin && (
               <button
               className="watchlist-btn td-right-align"
@@ -168,9 +168,9 @@ export default function List({ coin }) {
               {watchLogo2}
             </button>
             )}
-          </td>
+          </div>
         </Tooltip>
-      </tr>
+    </div>
     </Link>
   );
 }
